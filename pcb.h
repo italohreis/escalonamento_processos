@@ -1,6 +1,12 @@
 #ifndef PCB_H
 #define PCB_H
 
+typedef enum  {
+    PRONTO,
+    EXECUTANDO,
+    FINALIZADO
+} EstadoProcesso;
+
 typedef struct PCB {
     int pid;
     int prioridade;
@@ -10,11 +16,6 @@ typedef struct PCB {
     struct PCB *prox;
 } PCB;
 
-typedef enum {
-    PRONTO,
-    EXECUTANDO,
-    FINALIZADO
-} EstadoProcesso;
 
 PCB *criar_pcb(int pid, int prioridade, int tempo_total);
 void liberar_pcb(PCB *pcb);
