@@ -23,5 +23,7 @@ int main() {
 
     exibir_escalonador(&escalonador);
 
+    executar_escalonador(&escalonador);
+
     return 0;
 }
