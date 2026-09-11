@@ -7,6 +7,7 @@
 
 typedef struct {
     Fila filas[NUM_FILAS];
+    int tempo_atual;
 } Escalonador;
 
 void inicializar_escalonador(Escalonador *escalonador);
